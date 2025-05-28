@@ -23,13 +23,15 @@ const Home = () => {
                 <TableRow>
                   <TableCell>Product Id</TableCell>
                   <TableCell>Product Name</TableCell>
-                  <TableCell>Product Description</TableCell>
+                  <TableCell>Brand</TableCell>
+                  <TableCell>Category</TableCell>
                   <TableCell>Price</TableCell>
                   <TableCell>Actions</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
                 <TableRow>
+                  <TableCell></TableCell>
                   <TableCell></TableCell>
                   <TableCell></TableCell>
                   <TableCell></TableCell>

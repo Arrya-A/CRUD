@@ -15,7 +15,6 @@ import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { Link, useNavigate } from "react-router-dom";
-import axiosInstance from "../../utils/axiosInstance";
 import useAuth from "./hooks/useAuth";
 
 const registerSchema = yup.object().shape({
