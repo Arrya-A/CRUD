@@ -1,0 +1,81 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "Arrya",
+      "email": "arrya@gmail.com",
+      "password": "Arrya@123"
+    },
+    {
+      "id": "2f52"
+    },
+    {
+      "id": "417f"
+    },
+    {
+      "id": "eb2d"
+    },
+    {
+      "id": "2214",
+      "username": "Arrya",
+      "email": "arrya@bpract.com",
+      "password": "Arrya@123"
+    },
+    {
+      "id": "dc28",
+      "username": "Arrya",
+      "email": "arrya@bpract.com",
+      "password": "Arrya@123"
+    },
+    {
+      "id": "5dcb",
+      "username": "IBC_USER3",
+      "email": "arrya@bpract.com",
+      "password": "Arrya@123"
+    },
+    {
+      "id": "8c95",
+      "username": "IBC_USER3",
+      "email": "arrya@bpract.com",
+      "password": "Arrya@123"
+    },
+    {
+      "id": "e5e5",
+      "username": "IBC_USER3",
+      "email": "arrya@bpract.com",
+      "password": "Arrya@123"
+    },
+    {
+      "id": "1b7b",
+      "username": "IBC_USER3",
+      "email": "arrya@bpract.com",
+      "password": "Arrya@123"
+    },
+    {
+      "id": "4aa0",
+      "username": "arr",
+      "email": "arrya@bpract.com",
+      "password": "Arrya@123"
+    },
+    {
+      "id": "897d",
+      "username": "arr",
+      "email": "arrya@bpract.com",
+      "password": "Arrya@123"
+    },
+    {
+      "id": "b37f",
+      "username": "arr",
+      "email": "arrya@bpract.com",
+      "password": "Arrya@123"
+    },
+    {
+      "id": "a895",
+      "username": "test",
+      "email": "test@bpract.com",
+      "password": "Test@123"
+    }
+  ],
+
+  "products": []
+}
