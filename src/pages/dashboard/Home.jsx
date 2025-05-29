@@ -1,5 +1,5 @@
 import React from "react";
-import AddProduct from "../../components/Addproduct";
+import AddProduct from "../../components/AddProduct"
 import {
   Box,
   Container,
