@@ -19,7 +19,7 @@ const useAuth = () => {
   const addUser = async (newUserData) => {
     try {
       const response = await axiosInstance.post("users", newUserData);
-      setUsers(response.data);
+      setUsers((prevUsers) => [...prevUsers, response.data]); //Append the new user to the existing state
     } catch (err) {
       console.log(err);
     }

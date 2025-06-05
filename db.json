@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "username": "Arrya",
       "email": "arrya@gmail.com",
       "password": "Arrya@123"
@@ -74,8 +74,33 @@
       "username": "test",
       "email": "test@bpract.com",
       "password": "Test@123"
+    },
+    {
+      "id": "1b42",
+      "username": "mlmadmin",
+      "email": "test@bpract.com",
+      "password": "asdf@123A"
+    },
+    {
+      "id": "2d6a",
+      "username": "Arrya",
+      "email": "arryaa@bpract.com",
+      "password": "Arrya@123"
+    },
+    {
+      "id": "2672",
+      "username": "Arrya",
+      "email": "arryaa@bpract.com",
+      "password": "Arrya@123"
     }
   ],
-
-  "allProducts": []
+  "allProducts": [
+    {
+      "id": "559b",
+      "productName": "aa",
+      "brand": "aa",
+      "category": "aa",
+      "price": 1000
+    }
+  ]
 }

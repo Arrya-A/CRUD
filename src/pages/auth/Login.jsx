@@ -15,7 +15,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { Link, useNavigate } from "react-router-dom";
 import useAuth from "./hooks/useAuth";
-import jsonData from "../../../db.json"
+// import jsonData from "../../../db.json"
 
 const loginSchema = yup.object().shape({
   email: yup.string().required(),
@@ -23,8 +23,10 @@ const loginSchema = yup.object().shape({
 });
 
 const Login = () => {
-  const user = jsonData?.users
-  console.log(user);
+  // get directly from db.json file
+  // const user = jsonData?.users
+
+ 
   const { users } = useAuth();
   const navigate = useNavigate();
 

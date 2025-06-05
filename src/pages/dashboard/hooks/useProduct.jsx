@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import axiosInstance from "../../../utils/axiosInstance";
 const useProduct = () => {
   const [allProducts, setAllProducts] = useState([]);
@@ -18,13 +19,26 @@ const useProduct = () => {
     try {
       const response = await axiosInstance.post("allProducts", newProductData);
       console.log(response.data);
-      
+      setAllProducts((prev) => [...prev, response.data]);
     } catch (err) {
       console.log(err);
     }
   };
 
-  return { allProducts, fetchProducts, addProduct };
+  //API to delete products
+  const deleteProduct = async (id) => {
+    try {
+      await axiosInstance.delete(`allProducts/${id}`);
+      setAllProducts((prev) => prev.filter((product) => product.id !== id));
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+  return { allProducts, fetchProducts, addProduct ,deleteProduct};
 };
 
 export default useProduct;

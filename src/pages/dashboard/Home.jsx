@@ -1,7 +1,7 @@
-import React from "react";
-import AddProduct from "../../components/AddProduct"
+import AddProduct from "../../components/AddProduct";
 import {
   Box,
+  Button,
   Container,
   Table,
   TableBody,
@@ -10,12 +10,16 @@ import {
   TableHead,
   TableRow,
 } from "@mui/material";
+import EditProduct from "../../components/EditProduct";
+import useProduct from "./hooks/useProduct";
 
 const Home = () => {
+  const { allProducts, addProduct, deleteProduct } = useProduct();
+
   return (
     <>
       <Container maxWidth="md" sx={{ py: 5 }}>
-        <AddProduct />
+        <AddProduct onAddProduct={addProduct} />
         <Box>
           <TableContainer>
             <Table>
@@ -30,14 +34,21 @@ const Home = () => {
                 </TableRow>
               </TableHead>
               <TableBody>
-                <TableRow>
-                  <TableCell></TableCell>
-                  <TableCell></TableCell>
-                  <TableCell></TableCell>
-                  <TableCell></TableCell>
-                  <TableCell></TableCell>
-                  <TableCell></TableCell>
-                </TableRow>
+                {allProducts.map((product) => (
+                  <TableRow key={product.id}>
+                    <TableCell>{product.id}</TableCell>
+                    <TableCell>{product.productName}</TableCell>
+                    <TableCell>{product.brand}</TableCell>
+                    <TableCell>{product.category}</TableCell>
+                    <TableCell>{product.price}</TableCell>
+                    <TableCell>
+                      <EditProduct />
+                      <Button variant="contained" color="error" onClick={()=>deleteProduct(product.id)}>
+                        Delete
+                      </Button>
+                    </TableCell>
+                  </TableRow>
+                ))}
               </TableBody>
             </Table>
           </TableContainer>
