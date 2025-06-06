@@ -13,7 +13,15 @@ const productSchema = yup.object().shape({
   category: yup.string().required(),
   price: yup.number().positive().integer().required(),
 });
-const AddProduct = ({onAddProduct}) => {
+
+const defaultValues = {
+  productName: "",
+  brand: "",
+  category: "",
+  price: "",
+};
+
+const AddProduct = ({ onAddProduct }) => {
   const [openAddProductModal, setOpenAddProductModal] = useState(false);
 
   const handleClickOpenAddProductModal = () => {
@@ -30,12 +38,7 @@ const AddProduct = ({onAddProduct}) => {
     reset,
     formState: { errors },
   } = useForm({
-    defaultValues: {
-      productName: "",
-      brand: "",
-      category: "",
-      price: "",
-    },
+    defaultValues,
     resolver: yupResolver(productSchema),
   });
 
