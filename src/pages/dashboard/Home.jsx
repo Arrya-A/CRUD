@@ -16,6 +16,10 @@ import useProduct from "./hooks/useProduct";
 const Home = () => {
   const { allProducts, addProduct, deleteProduct } = useProduct();
 
+  const handleUpdate =()=>{
+    
+  }
+
   return (
     <>
       <Container maxWidth="md" sx={{ py: 5 }}>
@@ -42,7 +46,7 @@ const Home = () => {
                     <TableCell>{product.category}</TableCell>
                     <TableCell>{product.price}</TableCell>
                     <TableCell>
-                      <EditProduct />
+                      <EditProduct productData={product} onEditProduct={handleUpdate} />
                       <Button variant="contained" color="error" onClick={()=>deleteProduct(product.id)}>
                         Delete
                       </Button>
